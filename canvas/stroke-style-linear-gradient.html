@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fill Style</title>
+</head>
+<body>
+    <canvas id="box" width="200" height ="200"></canvas>
+    <script>
+        let box = document.getElementById("box");
+        let ctx = box.getContext("2d");
+
+        //context.createLinearGradient(x0,y0,x1,y1);
+        /**
+         * x0 => The x-coordinate of the start point of the gradient 
+         * y0 => The y-coordinate of the start point of the gradient 
+         * r0 => The radius of the starting circle
+         * x1 => The x-coordinate of the end point of the gradient 
+         * y1 => The y-coordinate of the end point of the gradient 
+         * r1 => The radius of the ending circle
+        **/
+        var gradient = ctx.createLinearGradient(0, 0, 170, 0);
+        gradient.addColorStop("0", "magenta");
+        gradient.addColorStop("0.5" ,"blue");
+        gradient.addColorStop("1.0", "red");
+
+        // Fill with gradient
+        ctx.strokeStyle = gradient;
+        ctx.lineWidth = 2;
+        ctx.strokeRect(20, 20, 150, 30);
+    </script>
+</body>
+</html>
