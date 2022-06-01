@@ -20,11 +20,9 @@
          * y1 => The y-coordinate of the end point of the gradient 
         **/
 
-        let gradient = ctx.createRadialGradient(100,40,90,40,80,20);
-        gradient.addColorStop(0,"#000ddd");
-        gradient.addColorStop(1,"#dddfff");
-        gradient.addColorStop(0.3,"#dddfff");
-        gradient.addColorStop(0.8,"#ff00aa");
+        let gradient = ctx.createRadialGradient(100,40,80,40,80,50);
+        gradient.addColorStop(0,"white");
+        gradient.addColorStop(1,"red");
         ctx.fillStyle = gradient;
         ctx.fillRect( 50,12, 100, 120 );
     </script>
