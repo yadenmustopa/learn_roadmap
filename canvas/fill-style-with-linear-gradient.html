@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fill Style</title>
+</head>
+<body>
+    <canvas id="box" width="200" height ="200"></canvas>
+    <script>
+        let box = document.getElementById("box");
+        let ctx = box.getContext("2d");
+
+        //context.createLinearGradient(x0,y0,x1,y1);
+        /**
+         * x0 => The x-coordinate of the start point of the gradient 
+         * y0 => The y-coordinate of the start point of the gradient 
+         * x1 => The x-coordinate of the end point of the gradient 
+         * y1 => The y-coordinate of the end point of the gradient 
+        **/
+
+        let gradient = ctx.createLinearGradient(1,2,6,4);
+        gradient.addColorStop(0,"#000ddd");
+        gradient.addColorStop(1,"#dddfff");
+        gradient.addColorStop(0.3,"#dddfff");
+        gradient.addColorStop(0.8,"#ff00aa");
+        ctx.fillStyle = gradient;
+        ctx.fillRect( 70,12, 100, 120 );
+    </script>
+</body>
+</html>
