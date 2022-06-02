@@ -22,6 +22,11 @@
          * r1 => The radius of the ending circle
         **/
         var gradient = ctx.createLinearGradient(0, 20, 170, 40);
+
+        /**
+         * addColorStop method at least one to have visible gradient
+         * gradient.addColorStop( 0.0 between 1.0, color )
+         **/
         gradient.addColorStop("0", "magenta");
         gradient.addColorStop("0.5" ,"blue");
         gradient.addColorStop("1.0", "red");
